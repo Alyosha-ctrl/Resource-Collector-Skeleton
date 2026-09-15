@@ -38,15 +38,17 @@ public class PlayerController : NetworkBehaviour
         // Debug.Log(input);
         
         // TODO Slice 2.5: smooth _smoothedInput toward the raw input so the walk cycle does not pop.
-        
+        _smoothedInput = Vector2.MoveTowards(_smoothedInput, input, Time.deltaTime * 10f);
+
+
         // TODO Slice 2.3: rotate and move forward/back.
         float rotation = input.x * _rotationSpeed *Time.deltaTime;
         transform.Rotate(0, rotation, 0);
 
         // TODO Slice 2.4: set the "Speed" animator float so walk speed matches input.
         UnityEngine.Vector3 direction = transform.forward;
-        _characterController.Move(direction * input.y *_movementSpeed * Time.deltaTime);
-        _animator.SetFloat("Speed", _characterController.velocity.magnitude); 
+        _characterController.Move(direction * _smoothedInput.y *_movementSpeed * Time.deltaTime);
+        // _animator.SetFloat("Speed", _characterController.velocity.magnitude); 
         
         // TODO Slice 6.2: detect a target and request interaction on E or left-click.
         UpdateInteractionTarget();
