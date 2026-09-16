@@ -39,8 +39,6 @@ public class ItemPickup : Interactable
         
         heldItem.SetHeldItem(_objectType);
         
-        NetworkObject.Despawn(false);
-        
-        
+        NetworkObject.Despawn(!NetworkObject.InScenePlaced);
     }
 }

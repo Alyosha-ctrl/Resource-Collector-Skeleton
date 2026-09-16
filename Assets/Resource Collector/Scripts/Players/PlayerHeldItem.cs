@@ -41,11 +41,11 @@ public class PlayerHeldItem : NetworkBehaviour
 
     public override void OnNetworkPreDespawn()
     {
-        if(!IsServer) return;
-        if(!NetworkManager.ShutdownInProgress) return;
-        DropHeldItem(transform.position);
         base.OnNetworkPreDespawn();
-
+        if(!IsServer) return;
+        if(NetworkManager.ShutdownInProgress) return;
+        DropHeldItem(transform.position);
+        Debug.Log("Despawned and dropped item");
         // TODO Slice 7.3: on the server, drop the held item unless the host is shutting down. </> end of Slice 7
     }
 

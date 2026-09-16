@@ -64,7 +64,8 @@ public class PlayerController : NetworkBehaviour
         base.OnNetworkSpawn();
 
         // TODO Slice 2.6: make the main camera follow only its local player. </> end of Slice 2
-        FindAnyObjectByType<FollowCamera>().Target = transform;
+        if (IsOwner)
+            Camera.main.GetComponent<FollowCamera>().Target = transform;
     }
 
     public override void OnNetworkDespawn()

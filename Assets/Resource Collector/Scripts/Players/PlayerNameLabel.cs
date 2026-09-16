@@ -24,6 +24,7 @@ public class PlayerNameLabel : NetworkBehaviour
         // TODO Slice 1.2: rotate the world-space label to face the main
         // camera, keeping the look direction flat by setting its y to zero.
         // </> end of Slice 1
+        if(!IsOwner) return ;
         Vector3 direction = transform.position - Camera.main.transform.position;
         direction.y = 0;
         if (direction.sqrMagnitude > 0.001f)
