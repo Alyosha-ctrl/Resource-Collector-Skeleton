@@ -48,7 +48,7 @@ public class PlayerController : NetworkBehaviour
         // TODO Slice 2.4: set the "Speed" animator float so walk speed matches input.
         UnityEngine.Vector3 direction = transform.forward;
         _characterController.Move(direction * _smoothedInput.y *_movementSpeed * Time.deltaTime);
-        // _animator.SetFloat("Speed", _characterController.velocity.magnitude); 
+        _animator.SetFloat("Speed", _characterController.velocity.magnitude); 
         
         // TODO Slice 6.2: detect a target and request interaction on E or left-click.
         UpdateInteractionTarget();
