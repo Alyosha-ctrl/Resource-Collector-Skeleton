@@ -89,9 +89,9 @@ public class PlayerHeldItem : NetworkBehaviour
         {
             return;
         }
-
         ItemCatalogEntry matchingEntry = _itemCatalog.Find((item) => item.type == _heldObjectType.Value);
-        NetworkObject.InstantiateAndSpawn(matchingEntry.prefab.gameObject, NetworkManager, position: position);
+        NetworkObject blah = NetworkObject.InstantiateAndSpawn(matchingEntry.prefab.gameObject, NetworkManager, position: position);
+        blah.transform.Rotate(new Vector3(90f,0f,0f));
         Clear();
     }
 

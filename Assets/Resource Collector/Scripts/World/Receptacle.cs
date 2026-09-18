@@ -18,6 +18,8 @@ public class Receptacle : Interactable
 
     public bool IsFilled => _stackedCount.Value >= _stackedResourceVisuals.Count;
 
+    [SerializeField] NetworkObject abomination;
+
     public override void OnNetworkSpawn()
     {
         base.OnNetworkSpawn();
@@ -49,6 +51,7 @@ public class Receptacle : Interactable
         // TODO Slice 9.6: add one resource and clear the player's hand. </> end of Slice 9
         HandleStackedCountChanged(_stackedCount.Value, _stackedCount.Value + 1);
         heldItem.Clear();
+        AudioSource.PlayClipAtPoint(_audioClip, transform.position);
         Debug.Log(_stackedCount.Value);
     }
 
@@ -58,9 +61,10 @@ public class Receptacle : Interactable
         _stackedCount.Value = newValue;
         ApplyStackedCount(newValue);
         // when the stack grows.
-        if(previousValue < newValue)
+        if (IsFilled)
         {
-            AudioSource.PlayClipAtPoint(_audioClip, transform.position);
+            Debug.Log("Filled");
+            abomination.gameObject.SetActive(true);
         }
     }
 

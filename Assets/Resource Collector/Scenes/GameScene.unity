@@ -2022,6 +2022,115 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 73dbe4cc9c782f74db20a3ec1e60a2f5, type: 3}
+--- !u!1001 &4180544239944994663
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2865600394049266667, guid: c53655c65ccfc3d4eaf761a06169f02c, type: 3}
+      propertyPath: m_Name
+      value: Abomination
+      objectReference: {fileID: 0}
+    - target: {fileID: 3210917879746066769, guid: c53655c65ccfc3d4eaf761a06169f02c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3210917879746066769, guid: c53655c65ccfc3d4eaf761a06169f02c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.18000004
+      objectReference: {fileID: 0}
+    - target: {fileID: 3210917879746066769, guid: c53655c65ccfc3d4eaf761a06169f02c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.648
+      objectReference: {fileID: 0}
+    - target: {fileID: 3210917879746066769, guid: c53655c65ccfc3d4eaf761a06169f02c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3210917879746066769, guid: c53655c65ccfc3d4eaf761a06169f02c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.00000008146034
+      objectReference: {fileID: 0}
+    - target: {fileID: 3210917879746066769, guid: c53655c65ccfc3d4eaf761a06169f02c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3210917879746066769, guid: c53655c65ccfc3d4eaf761a06169f02c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3210917879746066769, guid: c53655c65ccfc3d4eaf761a06169f02c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3210917879746066769, guid: c53655c65ccfc3d4eaf761a06169f02c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3210917879746066769, guid: c53655c65ccfc3d4eaf761a06169f02c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2865600394049266667, guid: c53655c65ccfc3d4eaf761a06169f02c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4180544239944994666}
+    - targetCorrespondingSourceObject: {fileID: 2865600394049266667, guid: c53655c65ccfc3d4eaf761a06169f02c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4180544239944994665}
+  m_SourcePrefab: {fileID: 100100000, guid: c53655c65ccfc3d4eaf761a06169f02c, type: 3}
+--- !u!1 &4180544239944994664 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2865600394049266667, guid: c53655c65ccfc3d4eaf761a06169f02c, type: 3}
+  m_PrefabInstance: {fileID: 4180544239944994663}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4180544239944994665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4180544239944994664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Netcode.Runtime::Unity.Netcode.NetworkObject
+  GlobalObjectIdHash: 3428424707
+  InScenePlacedSourceGlobalObjectIdHash: 0
+  m_InScenePlacedDisabledByDefault: 0
+  DeferredDespawnTick: 0
+  Ownership: 1
+  AlwaysReplicateAsRoot: 0
+  SynchronizeTransform: 1
+  m_InScenePlaced: 1
+  ActiveSceneSynchronization: 0
+  SceneMigrationSynchronization: 0
+  SpawnWithObservers: 1
+  DontDestroyWithOwner: 0
+  AutoObjectParentSync: 1
+  SyncOwnerTransformWhenParented: 1
+  AllowOwnerToParent: 0
+--- !u!114 &4180544239944994666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4180544239944994664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0064ee8dea5411ea455c29198ee531b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ItemPickup
+  ShowTopMostFoldoutHeaderGroup: 1
+  _objectType: 0
 --- !u!1001 &5358238932391429143
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2149,3 +2258,4 @@ SceneRoots:
   - {fileID: 1007745353}
   - {fileID: 1066701196}
   - {fileID: 892150400}
+  - {fileID: 4180544239944994663}
